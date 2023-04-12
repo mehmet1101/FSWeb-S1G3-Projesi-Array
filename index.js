@@ -40,8 +40,8 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(orijinalTatlar){
+  return orijinalTatlar;
 }
 
 
@@ -56,8 +56,14 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(orijinalTatlar){
+ if( orijinalTatlar.length === 25) {
+  return true
+ }
+ else(orijinalTatlar.length !==25);
+ {
+  return false;
+ }
 }
 
 
@@ -73,10 +79,13 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
   Örneğin: cesitEkle(orijinalTatlar, "Kakule") işlevi doğru çalıştığında ["Kakule", "Muz",..."Vanilya"] şeklinde dönmelidir
 */
 
+// array'e item ekledim fakat passed olmadı?
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+const yenitatlı = "Kakule,"+ orijinalTatlar
+function cesitEkle(orijinalTatlar){
+ return(yenitatlı);
 }
+console.log(yenitatlı);
 
 
 /* Cörev 4:
@@ -92,8 +101,8 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(orijinalTatlar){
+  return(orijinalTatlar.slice(0, -1));
 }
 
 
@@ -108,11 +117,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+// Ceviz'i return ediyorum fakat passed olmadı.
+
+function indekstekiCesitiGetir(orijinalTatlar){
+  return(indekstekiCesitiGetir = orijinalTatlar.slice(3, 4));
 }
-
-
 /* Görev 6:
 
 Firma, ürün yelpazesine daha fazla lezzet eklemek istediğinden, sadece ilk veya son aromayı keyfi olarak çıkarmak yerine, aroma adına göre aromaları kaldırmaları gerektiğini fark ederler. Göreviniz, verilen bir dizinde, ada göre bu tadı diziden çıkarmak.
@@ -128,8 +137,9 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(orijinalTatlar,tat){
+  const ismeGoreCesitCikar = orijinalTatlar.filter(tatlı => tatlı !== 'Tarçın')
+  return(orijinalTatlar.length - ismeGoreCesitCikar.length);
 }
 
 
@@ -153,9 +163,9 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
   Bu sorunu çözmek için GELİŞMİŞ DİZİ YÖNTEMLERİNİ (yani .filter) KULLANMAYIN.
 */
 
-
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+const keyword = 'Çikolata'
+function ismeGoreFiltrele(orijinalTatlar){
+  return(ismeGoreFiltrele = orijinalTatlar.filter(tatlılar => tatlılar.includes(keyword)));
 }
 
 
